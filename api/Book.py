@@ -50,7 +50,7 @@ class Book(db.Document):
         return
 
     def return_book(bookId, status):
-        Book.objects(bookId=bookId).update(status=status, borrower="")
+        Book.objects(bookId=bookId).update(status=status, borrower=None)
         return
 
     def get_count():
